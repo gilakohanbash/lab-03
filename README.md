@@ -10,7 +10,7 @@
 
 *Question 1: Why are RESTful APIs scalable?*
 
-RESTful APIs are scalable because they allow for a speration between the client and the server. The whole idea of RESTful APIs is to make data migration from one server to another easier. The interactions between the client and server are optimimized by Representational State Transfer (REST) which has several unique attributes, specifically being statelessness. Statelessness removes server load since the server does not have to worry or keep any information from previous client requests.
+RESTful APIs are scalable because they allow for a seperation between the client and the server. The whole idea of RESTful APIs is to make data migration from one server to another easier. The interactions between the client and server are optimized by Representational State Transfer (REST) which has several unique attributes, specifically being stateless. Statelessness removes server load since the server does not have to worry or keep any information from previous client requests.
 
 
 *Question 2: According to the definition of “resources” provided in the AWS article above, What are the resources the mail server is providing to clients?*
@@ -25,7 +25,7 @@ We did not include the PUT method in our server. This method allows clients to u
 
 *Question 4: Why are API keys used for many RESTful APIs? What purpose do they serve? Make sure to cite any online resources you use to answer this question!*
 
-With API keys, the server assigns a uniqe generated value token to a first-time client. After that, whenever the same client tries to access any resouces, the API key will need to verify itself for authentification. This is useful because it allows you to charge for your service (only give the client the key to do certain operations).
+With API keys, the server assigns a uniqe generated value token to a first-time client. After that, whenever the same client tries to access any resource, the API key will need to verify itself for authentification. This is useful because it allows you to charge for your service (only give the client the key to do certain operations).
 
 Online resource - AWS Link on Lab 3: https://aws.amazon.com/what-is/restful-api/
 
