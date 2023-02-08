@@ -33,24 +33,64 @@ def send_mail(recipient: str, sender: str, subject: str, body: str) -> bool:
 
 def get_inbox(recipient: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
+    
+    gets the inbox of the recipient, and contains the following info: 
+    The JSON body of the request contains the following keys:
+        - recipient
+
+    Arguments:
+        recipient(str): The recipient of the mail
+        
+    Returns:
+        Nothing
     """
     response = requests.get(f'{SERVER}/mail/inbox/{recipient}')
     pprint.pprint(response.json())
 
 def get_sent(sender: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
+
+    Receives what was sent from the server. 
+    The JSON body of the request contains the following keys:
+        - sender
+
+    Arguments:
+        sender(str): the sender of the mail
+
+    Returns:
+        Nothing
     """
     response = requests.get(f'{SERVER}/mail/sent/{sender}')
     pprint.pprint(response.json())
 
 def get_mail(mail_id: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
+
+    Gets the mail from the server
+    The JSON body of the request contains the following keys:
+        - A mail id
+
+    Arguments: 
+        mail_id(str): the mail id we must get mail from
+
+    Returns:
+        Nothing
     """
     response = requests.get(f'{SERVER}/mail/{mail_id}')
     pprint.pprint(response.json())
 
 def delete_mail(mail_id: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
+
+    Deletes the client's mail
+    JSON body of the request contains the following keys:
+        - mail id
+
+    Arguments:
+        mail_id(str): the mail id we must delete mail from
+        
+    Returns:
+        Nothing
     """
     response = requests.delete(f'{SERVER}/mail/{mail_id}')
     pprint.pprint(response.json())
@@ -119,4 +159,3 @@ def main():
 # you'll need to demo sending, receiving, and deleting mail for checkoff.
 if __name__ == '__main__':
     main()
-
